@@ -1,0 +1,138 @@
+{
+  "ber-margin-map": [
+    {
+      "id": "ot1",
+      "transceiver-line-set": [
+        {
+          "gosnr-margin-map": [
+            {
+              "pre-fec-ber": 0.037,
+              "gosnr-margin": 0.0
+            },
+            {
+              "pre-fec-ber": 0.0339,
+              "gosnr-margin": 0.251098251
+            },
+            {
+              "pre-fec-ber": 0.0205,
+              "gosnr-margin": 1.239238717
+            },
+            {
+              "pre-fec-ber": 0.0112,
+              "gosnr-margin": 2.223844278
+            },
+            {
+              "pre-fec-ber": 0.00566,
+              "gosnr-margin": 3.193302193
+            },
+            {
+              "pre-fec-ber": 0.00249,
+              "gosnr-margin": 4.187188951
+            },
+            {
+              "pre-fec-ber": 0.00096,
+              "gosnr-margin": 5.168508978
+            },
+            {
+              "pre-fec-ber": 0.000316,
+              "gosnr-margin": 6.180256305
+            },
+            {
+              "pre-fec-ber": 8.86E-05,
+              "gosnr-margin": 7.178857863
+            },
+            {
+              "pre-fec-ber": 2.22E-05,
+              "gosnr-margin": 8.168124393
+            },
+            {
+              "pre-fec-ber": 4.91E-06,
+              "gosnr-margin": 9.160908205
+            },
+            {
+              "pre-fec-ber": 9.91E-07,
+              "gosnr-margin": 10.13581048
+            },
+            {
+              "pre-fec-ber": 1.96E-07,
+              "gosnr-margin": 11.12135202
+            },
+            {
+              "pre-fec-ber": 5.28E-08,
+              "gosnr-margin": 12.07733445
+            },
+            {
+              "pre-fec-ber": 1.63E-08,
+              "gosnr-margin": 13.06633665
+            },
+            {
+              "pre-fec-ber": 8.64E-09,
+              "gosnr-margin": 14.01080648
+            },
+            {
+              "pre-fec-ber": 3.84E-09,
+              "gosnr-margin": 14.95988453
+            },
+            {
+              "pre-fec-ber": 2.88E-09,
+              "gosnr-margin": 15.90561246
+            },
+            {
+              "pre-fec-ber": 1.92E-09,
+              "gosnr-margin": 16.82531093
+            },
+            {
+              "pre-fec-ber": 9.60E-10,
+              "gosnr-margin": 17.74627987
+            }
+          ],
+          "osnr-limit-measured": 12.8,
+          "baud-rate": 69.0
+        }
+      ]
+    },
+    {
+      "id": "ot2",
+      "transceiver-line-set": [
+        {
+          "gosnr-margin-map": [
+            {
+              "pre-fec-ber": 0.054,
+              "gosnr-margin": 0.0
+            },
+            {
+              "pre-fec-ber": 0.0461,
+              "gosnr-margin": 0.47
+            },
+            {
+              "pre-fec-ber": 0.0331,
+              "gosnr-margin": 1.37
+            },
+            {
+              "pre-fec-ber": 0.0155,
+              "gosnr-margin": 3.04
+            },
+            {
+              "pre-fec-ber": 0.00663,
+              "gosnr-margin": 4.67
+            },
+            {
+              "pre-fec-ber": 0.00292,
+              "gosnr-margin": 6.11
+            },
+            {
+              "pre-fec-ber": 0.00165,
+              "gosnr-margin": 7.31
+            },
+            {
+              "pre-fec-ber": 0.00087,
+              "gosnr-margin": 10.63
+            }
+          ],
+          "osnr-limit-measured": 14.64,
+          "baud-rate": 91.6
+        }
+      ]
+    }
+  ]
+}

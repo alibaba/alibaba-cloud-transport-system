@@ -1,0 +1,342 @@
+{
+  "amplifier": [
+    {
+      "type": "BA",
+      "part-number": "EDFA1",
+      "saturation-power": 23.8,
+      "gain-range": {
+        "min": 16.0,
+        "max": 25.0
+      },
+      "noise-figure-map": [
+        {
+          "gain": 16.0,
+          "noise-figure": 9.5
+        },
+        {
+          "gain": 17.0,
+          "noise-figure": 8.2
+        },
+        {
+          "gain": 18.0,
+          "noise-figure": 7.3
+        },
+        {
+          "gain": 19.0,
+          "noise-figure": 6.8
+        },
+        {
+          "gain": 20.0,
+          "noise-figure": 6.2
+        },
+        {
+          "gain": 21.0,
+          "noise-figure": 5.7
+        },
+        {
+          "gain": 22.0,
+          "noise-figure": 5.4
+        },
+        {
+          "gain": 23.0,
+          "noise-figure": 5.1
+        },
+        {
+          "gain": 24.0,
+          "noise-figure": 4.9
+        },
+        {
+          "gain": 25.0,
+          "noise-figure": 4.7
+        }
+      ]
+    },
+    {
+      "type": "PA",
+      "part-number": "EDFA1",
+      "saturation-power": 22.5,
+      "gain-range": {
+        "min": 21.0,
+        "max": 34.0
+      },
+      "noise-figure-map": [
+        {
+          "gain": 21.0,
+          "noise-figure": 8.5
+        },
+        {
+          "gain": 22.0,
+          "noise-figure": 7.0
+        },
+        {
+          "gain": 23.0,
+          "noise-figure": 6.0
+        },
+        {
+          "gain": 24.0,
+          "noise-figure": 5.4
+        },
+        {
+          "gain": 25.0,
+          "noise-figure": 5.1
+        },
+        {
+          "gain": 26.0,
+          "noise-figure": 4.8
+        },
+        {
+          "gain": 27.0,
+          "noise-figure": 4.7
+        },
+        {
+          "gain": 28.0,
+          "noise-figure": 4.5
+        },
+        {
+          "gain": 29.0,
+          "noise-figure": 4.5
+        },
+        {
+          "gain": 30.0,
+          "noise-figure": 4.4
+        },
+        {
+          "gain": 31.0,
+          "noise-figure": 4.4
+        },
+        {
+          "gain": 32.0,
+          "noise-figure": 4.4
+        },
+        {
+          "gain": 33.0,
+          "noise-figure": 4.4
+        },
+        {
+          "gain": 34.0,
+          "noise-figure": 4.4
+        }
+      ]
+    },
+    {
+      "type": "BA",
+      "part-number": "EDFA2",
+      "saturation-power": 23.5,
+      "gain-range": {
+        "min": 15.0,
+        "max": 25.0
+      },
+      "noise-figure-map": [
+        {
+          "gain": 15.0,
+          "noise-figure": 8.5
+        },
+        {
+          "gain": 16.0,
+          "noise-figure": 7.8
+        },
+        {
+          "gain": 17.0,
+          "noise-figure": 6.5
+        },
+        {
+          "gain": 18.0,
+          "noise-figure": 6.1
+        },
+        {
+          "gain": 19.0,
+          "noise-figure": 5.6
+        },
+        {
+          "gain": 20.0,
+          "noise-figure": 5.1
+        },
+        {
+          "gain": 21.0,
+          "noise-figure": 5.0
+        },
+        {
+          "gain": 22.0,
+          "noise-figure": 4.7
+        },
+        {
+          "gain": 23.0,
+          "noise-figure": 4.7
+        },
+        {
+          "gain": 24.0,
+          "noise-figure": 4.6
+        },
+        {
+          "gain": 25.0,
+          "noise-figure": 4.5
+        }
+      ]
+    },
+    {
+      "type": "PA",
+      "part-number": "EDFA2",
+      "saturation-power": 23.5,
+      "gain-range": {
+        "min": 15.0,
+        "max": 25.0
+      },
+      "noise-figure-map": [
+        {
+          "gain": 15.0,
+          "noise-figure": 8.5
+        },
+        {
+          "gain": 16.0,
+          "noise-figure": 7.8
+        },
+        {
+          "gain": 17.0,
+          "noise-figure": 6.5
+        },
+        {
+          "gain": 18.0,
+          "noise-figure": 6.1
+        },
+        {
+          "gain": 19.0,
+          "noise-figure": 5.6
+        },
+        {
+          "gain": 20.0,
+          "noise-figure": 5.1
+        },
+        {
+          "gain": 21.0,
+          "noise-figure": 5.0
+        },
+        {
+          "gain": 22.0,
+          "noise-figure": 4.7
+        },
+        {
+          "gain": 23.0,
+          "noise-figure": 4.7
+        },
+        {
+          "gain": 24.0,
+          "noise-figure": 4.6
+        },
+        {
+          "gain": 25.0,
+          "noise-figure": 4.5
+        }
+      ]
+    },
+    {
+      "type": "BA",
+      "part-number": "EDFA3",
+      "saturation-power": 23.5,
+      "gain-range": {
+        "min": 22.0,
+        "max": 32.0
+      },
+      "noise-figure-map": [
+        {
+          "gain": 22.0,
+          "noise-figure": 8.3
+        },
+        {
+          "gain": 23.0,
+          "noise-figure": 7.3
+        },
+        {
+          "gain": 24.0,
+          "noise-figure": 6.5
+        },
+        {
+          "gain": 25.0,
+          "noise-figure": 6.1
+        },
+        {
+          "gain": 26.0,
+          "noise-figure": 5.6
+        },
+        {
+          "gain": 27.0,
+          "noise-figure": 5.3
+        },
+        {
+          "gain": 28.0,
+          "noise-figure": 5.2
+        },
+        {
+          "gain": 29.0,
+          "noise-figure": 5.1
+        },
+        {
+          "gain": 30.0,
+          "noise-figure": 5.0
+        },
+        {
+          "gain": 31.0,
+          "noise-figure": 4.9
+        },
+        {
+          "gain": 32.0,
+          "noise-figure": 4.8
+        }
+      ]
+    },
+    {
+      "type": "PA",
+      "part-number": "EDFA3",
+      "saturation-power": 23.5,
+      "gain-range": {
+        "min": 22.0,
+        "max": 32.0
+      },
+      "noise-figure-map": [
+        {
+          "gain": 22.0,
+          "noise-figure": 8.3
+        },
+        {
+          "gain": 23.0,
+          "noise-figure": 7.3
+        },
+        {
+          "gain": 24.0,
+          "noise-figure": 6.5
+        },
+        {
+          "gain": 25.0,
+          "noise-figure": 6.1
+        },
+        {
+          "gain": 26.0,
+          "noise-figure": 5.6
+        },
+        {
+          "gain": 27.0,
+          "noise-figure": 5.3
+        },
+        {
+          "gain": 28.0,
+          "noise-figure": 5.2
+        },
+        {
+          "gain": 29.0,
+          "noise-figure": 5.1
+        },
+        {
+          "gain": 30.0,
+          "noise-figure": 5.0
+        },
+        {
+          "gain": 31.0,
+          "noise-figure": 4.9
+        },
+        {
+          "gain": 32.0,
+          "noise-figure": 4.8
+        }
+      ]
+    }
+  ]
+}
