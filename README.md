@@ -1,1 +1,87 @@
-# alibaba-cloud-transport-system
+# Alibaba-Cloud Transport System Dataset
+## Terms explanation
+- EDFA: Erbium doped fiber amplifiers
+
+- OCM：optical channel monitors
+
+- OMS：optical multiplex sections
+
+- OCH: optical channel signals
+
+- GSNR: Generalized Signal to Noise Ratios
+
+- BER: Bit Error Ratio
+
+- OLR: Optical Line Router
+
+- ROADM: econfigurable optical add-drop multiplexer
+
+- OLA: Optical Line Amplifier
+
+- OLE: Optical Line Equalizer
+
+- PN: Product Number
+
+## Dataset Folder Structure
+The whole dataset folder structure is shown as following:
+
+![imag](https://github.com/alibaba/alibaba-cloud-transport-system/blob/main/png/data_structure.jpg)
+
+In the dataset, three Json files and three csv files are provided which providing comprehensive information required for performance estimation.
+### Json File Structure
+We provide `ber-margin.json`, `ola.json`, `olr.json` in the dataset. 
+
+`ber-margin.json` records the corresponding BER-GOSNR curves to serve as a benchmark for comparison with the estimated GOSNRs which are measured in the laboratory and they are measured at B2B condition. The open-source data we provided focuses on two electrical devices. In the JSON file, we provide the BER-GOSNR curves for these two electrical devices, distinguishing them by their respective IDs. And the osnr-limit and baud-rate of the device are also provided.
+
+`ola.json`, `olr.json` records the relationship between the noise figure and gain of each EDFA which is provided by the vendor. We can find the NF-GAIN curve of different EDFA by using the PN as a reference. It is worth noting that for OLA and OLR, the NF-GAIN curves corresponding to the same PN are different.
+
+### Csv File Structure
+
+We Provide `performance_optical.csv`, `ocm.csv`, 'performance_elec.csv` in the dataset.
+
+`performance_optical.csv` records the total input/output optical power of the EDFA with one data point per hour, and both of them are calibrated to the panel port which is equivalent to the panel power when VOA is set to 0 dB. For each of them, three statistic data types are recorded: min, max, and average, which are distinguished by the column stats_type, representing the maximum, minimum, and average during the scanning period of 15 minutes. It is worth noting that the time interval provided by us is one hour, meaning that we only consider data for 15-minute intervals within a one-hour period. Each EFDA’s tilt configuration and VOA’s attenuation value are also stored in this table. The structure of the table and the meaning of each column of the table is shown as following:
+| column   | meaning |
+|----------|----------|
+|device_name|the name of the device|
+|logical_name|the logical name of the device|
+|item| including "inputTPM" and "outputTPM" which indicates the input power and the output power of the locator in device|
+|stats_type| including "min", "avg", 'max" which indicates the min, avg and max power within 15 minutes|
+|value| the value of the power and the unit is dBm|
+|actual_gain| the gain of the edfa|
+|actual-gain_tilt| the gain tilt of the edfa|
+|pn| the product-number of the edfa|
+|attenuation| the attenuation of the VOA after the edfa|
+|time| the time of the value|
+
+Through the device ID and locator, key performances of different components in the device can be found.
+
+`ocm.csv` records the optical channel power after each EDFA. The structure of the table and the meaning of each column of the table is shown as following:
+| column   | meaning |
+|----------|----------|
+|device_name| the name of the device|
+|logical_name|the logical name of the device|
+|online_channel| the number of channels pass through the edfa|
+|center_frequency| the center frequency of the channel|
+|power| the channel power of the center frequency|
+|time| the time of the value|
+
+Similar as that in table `performance_optical`, such spectrum information is also located by the device index and the locator. Again, the channel power is calibrated to the output port on the panel which is equivalent to the panel power when VOA is set to 0 dB.
+
+In the table `performance_elec`, performance of optical terminals (transponders) is saved. Each terminal is identified by the OCH Group index, center frequency, and A or Z end by the column name as ochgroup, center_freuqency, side. For each OCH, transponders at two ends are denoted by A and Z. In the table performance_elec, statistic data of pre-FEC BER is saved in the column value, including max, min and average value within each 15 minutes. It is worth noting that the time interval provided by us is also one hour, and we only select the 15-minute data within a one-hour period. The structure of the table and the meaning of each column of the table is shown as following:
+| column   | meaning |
+|----------|----------|
+|device_name|the name of the device|
+|logical_name|the logical name of the device|
+|item| all of this column is 'preFecBer'|
+|stats_type| including "min", "avg", "max", "instant" which indicates the min, avg and max, instant value within 15 minutes|
+|value| the ber of the device|
+|och| the och ID corresponding to the device name and logical name|
+|center_frequency| the center frequency of the och|
+|och_group| the och group ID of the och|
+|time| the time of the value|
+|side| the side of the och, including 'A' and 'Z'|
+|pn| the product number of the device| 
+
+By the PN of transponder and the ber value, we can obtain the GOSNR with `ber-margin.json`. 
+
+
