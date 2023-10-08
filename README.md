@@ -83,5 +83,15 @@ In the table `performance_elec`, performance of optical terminals (transponders)
 |pn| the product number of the device| 
 
 By the PN of transponder and the ber value, we can obtain the GOSNR with `ber-margin.json`. 
+## Python Demo
+We provide a simple python demo to show how to use the data. Taking OMS1 as an example, we can obtain the output power of device 1 and the input power of device 2. Then, the real fiber loss can be calculated.  In the meanwile, with the actual gain of device 1 and the `olr.json`, the noise figure can be obtained. Channel power can be get from `ocm.csv`. The channel power visualization of device 1 at '2000-01-01 00:00:00' is shown as following:
+
+![imag](https://github.com/alibaba/alibaba-cloud-transport-system/blob/main/png/ocm.png)
+
+## Related papers
+[1] Y. He, Z. Zhai, L. Wang, Y. Yan, L. Dou, C. Xie, C. Lu and A. P. T. Lau, “Improved QoT Estimations Through Refined Signal Power Measurements in a Disaggregated and Partially-Loaded Live Production Network,” in 2023 Optical Fiber Communications Conference and Exhibition (OFC), (2023), pp. Tu2F.5.
+[2] Y. He, Z. Zhai, L. Wang, Y. Yan, L. Dou, C. Xie, C. Lu and A. P. T. Lau, “Improved QoT estimations through refined signal power measurements and data-driven parameter optimizations in a disaggregated and partially loaded live production network,” J.Opt. Commun. Netw., 15, pp. 638-648 (2023).
+
+
 
 
