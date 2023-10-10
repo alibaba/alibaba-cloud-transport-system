@@ -1,20 +1,20 @@
 # Alibaba-Cloud Transport System Dataset
 ## Terms explanation
-- EDFA: Erbium doped fiber amplifiers
+- EDFA: Erbium Doped Fiber Amplifier
 
-- OCM：optical channel monitors
+- OCM：Optical Channel Monitor
 
-- OMS：optical multiplex sections
+- OMS：Optical Multiplex Section
 
-- OCH: optical channel signals
+- OCH: Optical Channel
 
-- GSNR: Generalized Signal to Noise Ratios
+- GOSNR: Generalized Optical Signal to Noise Ratio
 
 - BER: Bit Error Ratio
 
 - OLR: Optical Line Router
 
-- ROADM: Reconfigurable optical add-drop multiplexer
+- ROADM: Reconfigurable Optical Add Drop Multiplexer
 
 - OLA: Optical Line Amplifier
 
@@ -27,13 +27,12 @@ The whole dataset folder structure is shown as following:
 
 ![imag](https://github.com/alibaba/alibaba-cloud-transport-system/blob/main/png/data_structure.jpg)
 
-In the dataset, three Json files and three csv files are provided which providing comprehensive information required for performance estimation.
+In the dataset, three Json files and three csv files are provided with comprehensive information required for transport network performance estimation.
 ### Json File Structure
-We provide `ber-margin.json`, `ola.json`, `olr.json` in the dataset. 
 
-`ber-margin.json` records the corresponding BER-GOSNR curves to serve as a benchmark for comparison with the estimated GOSNRs which are measured in the laboratory and they are measured at B2B condition. The open-source data we provided focuses on two transponders. In the JSON file, we provide the BER-GOSNR curves for these two transponders, distinguishing them by their respective IDs. And the osnr-limit and baud rate of the device are also provided.
+`ber-margin.json` records two transponders' BER-GOSNR curves measured in the laboratory at B2B condition. Those two transponders are distinguished by their IDs. Besides that, osnr-limit and baud rate of the transponders are also provided.
 
-`ola.json`, `olr.json` records the relationship between the noise figure and gain of each EDFA which is provided by the vendor. We can find the NF-GAIN curve of different EDFA by using the PN as a reference. It is worth noting that for OLA and OLR, the NF-GAIN curves corresponding to the same PN are different.
+`ola.json` and `olr.json` records the relationship between the noise figure (NF) and gain of EDFAs classified by PN. It is worth noting that for OLA and OLR, the NF-GAIN curves corresponding to the same PN are different.
 
 ### Csv File Structure
 
@@ -90,6 +89,7 @@ We provide a simple python demo to show how to use the data. Taking OMS1 as an e
 
 ## Related papers
 [1] Y. He, Z. Zhai, L. Wang, Y. Yan, L. Dou, C. Xie, C. Lu and A. P. T. Lau, “Improved QoT Estimations Through Refined Signal Power Measurements in a Disaggregated and Partially-Loaded Live Production Network,” in 2023 Optical Fiber Communications Conference and Exhibition (OFC), (2023), pp. Tu2F.5.
+
 [2] Y. He, Z. Zhai, L. Wang, Y. Yan, L. Dou, C. Xie, C. Lu and A. P. T. Lau, “Improved QoT estimations through refined signal power measurements and data-driven parameter optimizations in a disaggregated and partially loaded live production network,” J.Opt. Commun. Netw., 15, pp. 638-648 (2023).
 
 
