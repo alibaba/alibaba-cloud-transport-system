@@ -62,13 +62,13 @@ Through the device ID and locator, key performances of different components in t
 |logical_name|the logical name of the device|
 |online_channel| the number of channels pass through the edfa|
 |center_frequency| the center frequency of the channel|
-|power| the channel power of the center frequency|
+|power| the channel power of the center frequency, the unit is dBm|
 |time| the time of the value|
 
 Similar as that in table `performance_optical`, such spectrum information is also located by the device index and the locator. Again, the channel power is calibrated to the output port on the panel which is equivalent to the panel power when VOA is set to 0 dB.
 
 In the table `performance_elec`, performance of optical terminals (transponders) is saved. Each terminal is identified by the OCH Group index, center frequency, and A or Z end by the column name as ochgroup, center_freuqency, side. For each OCH, transponders at two ends are denoted by A and Z. In the table performance_elec, statistic data of pre-FEC BER is saved in the column value, including max, min and average value within each 15 minutes. It is worth noting that the time interval provided by us is also one hour, and we only select the 15-minute data within a one-hour period. The structure of the table and the meaning of each column of the table is shown as following:
-| column   | meaning |
+| column   | description |
 |----------|----------|
 |device_name|the name of the device|
 |logical_name|the logical name of the device|
