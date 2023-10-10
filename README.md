@@ -14,7 +14,7 @@
 
 - OLR: Optical Line Router
 
-- ROADM: econfigurable optical add-drop multiplexer
+- ROADM: Reconfigurable optical add-drop multiplexer
 
 - OLA: Optical Line Amplifier
 
@@ -31,7 +31,7 @@ In the dataset, three Json files and three csv files are provided which providin
 ### Json File Structure
 We provide `ber-margin.json`, `ola.json`, `olr.json` in the dataset. 
 
-`ber-margin.json` records the corresponding BER-GOSNR curves to serve as a benchmark for comparison with the estimated GOSNRs which are measured in the laboratory and they are measured at B2B condition. The open-source data we provided focuses on two electrical devices. In the JSON file, we provide the BER-GOSNR curves for these two electrical devices, distinguishing them by their respective IDs. And the osnr-limit and baud-rate of the device are also provided.
+`ber-margin.json` records the corresponding BER-GOSNR curves to serve as a benchmark for comparison with the estimated GOSNRs which are measured in the laboratory and they are measured at B2B condition. The open-source data we provided focuses on two transponders. In the JSON file, we provide the BER-GOSNR curves for these two transponders, distinguishing them by their respective IDs. And the osnr-limit and baud rate of the device are also provided.
 
 `ola.json`, `olr.json` records the relationship between the noise figure and gain of each EDFA which is provided by the vendor. We can find the NF-GAIN curve of different EDFA by using the PN as a reference. It is worth noting that for OLA and OLR, the NF-GAIN curves corresponding to the same PN are different.
 
@@ -67,13 +67,13 @@ Through the device ID and locator, key performances of different components in t
 
 Similar as that in table `performance_optical`, such spectrum information is also located by the device index and the locator. Again, the channel power is calibrated to the output port on the panel which is equivalent to the panel power when VOA is set to 0 dB.
 
-In the table `performance_elec`, performance of optical terminals (transponders) is saved. Each terminal is identified by the OCH Group index, center frequency, and A or Z end by the column name as ochgroup, center_freuqency, side. For each OCH, transponders at two ends are denoted by A and Z. In the table performance_elec, statistic data of pre-FEC BER is saved in the column value, including max, min and average value within each 15 minutes. It is worth noting that the time interval provided by us is also one hour, and we only select the 15-minute data within a one-hour period. The structure of the table and the meaning of each column of the table is shown as following:
+In the table `performance_elec`, performance of optical terminals (transponders) is saved. Each terminal is identified by the OCH Group index, center frequency, and A or Z end by the column name as ochgroup, center_freuqency, side. For each OCH, transponders at two ends are denoted by A and Z. In the table performance_elec, statistic data of pre-FEC BER is saved in the column value, including max, min and average/instant value within each 15 minutes. It is worth noting that the time interval provided by us is also one hour, and we only select the 15-minute data within a one-hour period. The structure of the table and the meaning of each column of the table is shown as following:
 | column   | description |
 |----------|----------|
 |device_name|the name of the device|
 |logical_name|the logical name of the device|
 |item| all of this column is 'preFecBer'|
-|stats_type| including "min", "avg", "max", "instant" which indicates the min, avg and max, instant value within 15 minutes|
+|stats_type| including "min", "avg"/"instant", "max" which indicates the min, avg(instant) and max within 15 minutes|
 |value| the ber of the device|
 |och| the och ID corresponding to the device name and logical name|
 |center_frequency| the center frequency of the och|
@@ -84,7 +84,7 @@ In the table `performance_elec`, performance of optical terminals (transponders)
 
 By the PN of transponder and the ber value, we can obtain the GOSNR with `ber-margin.json`. 
 ## Python Demo
-We provide a simple python demo to show how to use the data. Taking OMS1 as an example, we can obtain the output power of device 1 and the input power of device 2. Then, the real fiber loss can be calculated.  In the meanwile, with the actual gain of device 1 and the `olr.json`, the noise figure can be obtained. Channel power can be get from `ocm.csv`. The channel power visualization of device 1 at '2000-01-01 00:00:00' is shown as following:
+We provide a simple python demo to show how to use the data. Taking OMS1 as an example, we can obtain the output power of device 1 and the input power of device 2. Then, the real fiber loss can be calculated.  In the meanwile, with the actual gain of device 1 and the `olr.json`, the noise figure can be obtained. And we also illustrate how to obtain the real channel power from OCM which is used in [1,2], The channel power visualization of device 1 at '2000-01-01 00:00:00' is shown as following:
 
 ![imag](https://github.com/alibaba/alibaba-cloud-transport-system/blob/main/png/ocm.png)
 
