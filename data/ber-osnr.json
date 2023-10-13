@@ -87,7 +87,8 @@
             }
           ],
           "osnr-limit-measured": 12.8,
-          "baud-rate": 69.0
+          "baud-rate": 69.0,
+          "line-rate":200G
         }
       ]
     },
@@ -130,7 +131,8 @@
             }
           ],
           "osnr-limit-measured": 14.64,
-          "baud-rate": 91.6
+          "baud-rate": 91.6,
+          "line-rate": 300G
         }
       ]
     }
